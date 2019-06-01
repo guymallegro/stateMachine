@@ -1,4 +1,4 @@
-public class AMDState implements IMDState {
+public abstract class AMDState implements IMDState {
 
     Context context;
 
@@ -17,16 +17,6 @@ public class AMDState implements IMDState {
     }
 
     @Override
-    public void turnOn() {
-
-    }
-
-    @Override
-    public void turnOff() {
-
-    }
-
-    @Override
     public void internetOn() {
 
     }
@@ -42,11 +32,6 @@ public class AMDState implements IMDState {
     }
 
     @Override
-    public void downloadStart() {
-
-    }
-
-    @Override
     public void downloadFinish() {
 
     }
@@ -57,27 +42,17 @@ public class AMDState implements IMDState {
     }
 
     @Override
-    public void downloadFix() {
-
-    }
-
-    @Override
-    public void downloadResume() {
-
-    }
-
-    @Override
     public void downloadAbort() {
 
     }
 
     @Override
-    public void downloadCancel() {
+    public void downloadFixed() {
 
     }
 
     @Override
-    public void downloadPause() {
+    public void downloadDelete() {
 
     }
 
