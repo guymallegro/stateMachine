@@ -3,20 +3,23 @@ public interface IMDState {
     void enterState();
     void exitState();
 
+    void turnOn();
+    void turnOff();
+
     void internetOn();
     void internetOff();
 
     void fileRequest();
     void downloadFinish();
-    void downloadAbort();
+    void downloadAborted();
     void downloadError();
-    void downloadFixed();
+    void errorFixed();
     void downloadDelete();
 
     void movieOn();
     void movieOff();
-    void pauseMovie();
-    void resumeMovie();
+    void holdMovie();
+    void resume();
     void restartMovie();
 
 

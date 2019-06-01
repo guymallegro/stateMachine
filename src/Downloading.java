@@ -8,20 +8,35 @@ public class Downloading extends AMDState {
         context.userPoints++;
         if (context.filesInQueue == 0)
             context.setDownloadCurrentState(context.waitingForDownload);
-        else if(context.isEnoughSpace)
+        else if (context.isEnoughSpace)
             context.setDownloadCurrentState(context.downloading);
-        else{
+        else {
             context.setDownloadCurrentState(context.pauseDownload);
         }
+
+        if (context.userPoints < 4)
+            context.setUserCurrentState(context.begginerUser);
+        else if (context.userPoints >= 4 && context.userPoints < 7)
+            context.setUserCurrentState(context.advancedUser);
+        else
+            context.setUserCurrentState(context.professionalUser);
     }
+
     @Override
-    public void downloadAbort() {
+    public void downloadAborted() {
         if (context.userPoints > 0)
             context.userPoints--;
-        if(context.filesInQueue > 0 && !context.isEnoughSpace)
+        if (context.filesInQueue > 0 && !context.isEnoughSpace)
             context.setDownloadCurrentState(context.waitingForDownload);
         else
             context.setDownloadCurrentState(context.downloading);
+
+        if (context.userPoints < 4)
+            context.setUserCurrentState(context.begginerUser);
+        else if (context.userPoints >= 4 && context.userPoints < 7)
+            context.setUserCurrentState(context.advancedUser);
+        else
+            context.setUserCurrentState(context.professionalUser);
     }
 
     @Override
@@ -30,7 +45,7 @@ public class Downloading extends AMDState {
     }
 
     @Override
-    public void internetOff(){
+    public void internetOff() {
         context.setDownloadCurrentState(context.waitingForInternet);
     }
 }

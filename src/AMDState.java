@@ -6,77 +6,71 @@ public abstract class AMDState implements IMDState {
         this.context = context;
     }
 
-    @Override
+
     public void enterState() {
-        System.out.println("enter " + getClass().toString());
+        System.out.println("enter" + getClass().toString().replaceAll("class", "") + " state");
     }
 
-    @Override
     public void exitState() {
-        System.out.println("exit " + getClass().toString());
+        System.out.println("exit" + getClass().toString().replaceAll("class", "") + " state");
     }
 
-    @Override
+    public void turnOn() {
+
+    }
+
+    public void turnOff() {
+
+    }
+
     public void internetOn() {
 
     }
 
-    @Override
     public void internetOff() {
 
     }
 
-    @Override
     public void fileRequest() {
 
     }
 
-    @Override
     public void downloadFinish() {
 
     }
 
-    @Override
     public void downloadError() {
 
     }
 
-    @Override
-    public void downloadAbort() {
+    public void downloadAborted() {
 
     }
 
-    @Override
-    public void downloadFixed() {
+    public void errorFixed() {
 
     }
 
-    @Override
     public void downloadDelete() {
 
     }
 
-    @Override
     public void movieOn() {
 
     }
 
-    @Override
     public void movieOff() {
 
     }
 
-    @Override
-    public void pauseMovie() {
+    public void holdMovie() {
 
     }
 
-    @Override
-    public void resumeMovie() {
+    public void resume() {
 
     }
 
-    @Override
     public void restartMovie() {
 
     }

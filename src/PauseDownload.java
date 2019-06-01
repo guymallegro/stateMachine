@@ -5,7 +5,7 @@ public class PauseDownload extends AMDState {
 
     @Override
     public void downloadDelete() {
-        if (context.seconds > 4) {
+        if (context.time > 4) {
             if (!context.isEnoughSpace)
                 context.setDownloadCurrentState(context.waitingForDownload);
             else {

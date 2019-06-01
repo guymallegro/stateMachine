@@ -6,7 +6,7 @@ public class FixingDownload extends AMDState {
     @Override
     public void enterState() {
         super.enterState();
-        context.seconds = 0;
+        context.time = 0;
     }
 
     @Override
@@ -19,7 +19,7 @@ public class FixingDownload extends AMDState {
     }
 
     @Override
-    public void downloadFixed() {
+    public void errorFixed() {
         context.setDownloadCurrentState(context.downloading);
     }
 }

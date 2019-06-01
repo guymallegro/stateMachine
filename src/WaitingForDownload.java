@@ -11,7 +11,7 @@ public class WaitingForDownload extends AMDState {
 
     @Override
     public void fileRequest() {
-        if (context.isEnoughSpace)
+        if (!context.isEnoughSpace)
             context.setDownloadCurrentState(context.pauseDownload);
         else if (context.isEnoughSpace && context.isInternetConnected) {
             context.setDownloadCurrentState(context.downloading);

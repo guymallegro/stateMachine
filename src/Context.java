@@ -6,7 +6,8 @@ public class Context {
     public int downloadPercentage = 0;
     public boolean isMoviePaused = false;
     public int userPoints = 0;
-    public int seconds=0;
+    public int time = 0;
+    public int stoppedAtFrame = 0;
 
     IMDState internetCurrentState;
     IMDState downloadCurrentState;
@@ -32,8 +33,8 @@ public class Context {
 
 
     public Context() {
-        internetOn = new InternetOff(this);
-        internetOff = new InternetOn(this);
+        internetOn = new InternetOn(this);
+        internetOff = new InternetOff(this);
 
         waitingForDownload = new WaitingForDownload(this);
         pauseDownload = new PauseDownload(this);
@@ -111,10 +112,10 @@ public class Context {
     }
 
     public void downloadAbort() {
-        internetCurrentState.downloadAbort();
-        downloadCurrentState.downloadAbort();
-        movieCurrentState.downloadAbort();
-        userCurrentState.downloadAbort();
+        internetCurrentState.downloadAborted();
+        downloadCurrentState.downloadAborted();
+        movieCurrentState.downloadAborted();
+        userCurrentState.downloadAborted();
     }
 
     public void downloadError() {
@@ -125,10 +126,10 @@ public class Context {
     }
 
     public void downloadFixed() {
-        internetCurrentState.downloadFixed();
-        downloadCurrentState.downloadFixed();
-        movieCurrentState.downloadFixed();
-        userCurrentState.downloadFixed();
+        internetCurrentState.errorFixed();
+        downloadCurrentState.errorFixed();
+        movieCurrentState.errorFixed();
+        userCurrentState.errorFixed();
     }
 
     public void downloadDelete() {
@@ -155,23 +156,36 @@ public class Context {
     }
 
     public void pauseMovie() {
-        internetCurrentState.pauseMovie();
-        downloadCurrentState.pauseMovie();
-        movieCurrentState.pauseMovie();
-        userCurrentState.pauseMovie();
+        internetCurrentState.holdMovie();
+        downloadCurrentState.holdMovie();
+        movieCurrentState.holdMovie();
+        userCurrentState.holdMovie();
     }
 
     public void resumeMovie() {
-        internetCurrentState.resumeMovie();
-        downloadCurrentState.resumeMovie();
-        movieCurrentState.resumeMovie();
-        userCurrentState.resumeMovie();
+        internetCurrentState.resume();
+        downloadCurrentState.resume();
+        movieCurrentState.resume();
+        userCurrentState.resume();
     }
 
     public void restartMovie() {
-        internetCurrentState.resumeMovie();
+        internetCurrentState.resume();
         downloadCurrentState.restartMovie();
         movieCurrentState.restartMovie();
         userCurrentState.restartMovie();
+    }
+
+    public void increaseTime() {
+        time++;
+        if (time == 3 && downloadCurrentState instanceof FixingDownload) {
+            setDownloadCurrentState(waitingForDownload);
+
+        } else if (time == 4 && downloadCurrentState instanceof PauseDownload && !isEnoughSpace) {
+            setDownloadCurrentState(waitingForDownload);
+
+        } else if (time == 4 && downloadCurrentState instanceof PauseDownload && isEnoughSpace && isInternetConnected) {
+            setDownloadCurrentState(downloading);
+        }
     }
 }
