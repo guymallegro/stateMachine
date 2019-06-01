@@ -22,4 +22,9 @@ public class PausedMovie extends AMDState {
     public void downloadAborted() {
         context.setMovieCurrentState(context.waitingToPlay);
     }
+
+    @Override
+    public void downloadFinish() {
+        context.setMovieCurrentState(context.waitingToPlay);
+    }
 }
