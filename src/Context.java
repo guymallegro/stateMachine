@@ -9,6 +9,7 @@ public class Context {
     public double downloadSpeed = 1;
     public int time = 0;
     public int stoppedAtFrame = 0;
+    public boolean isOn = false;
 
     IMDState internetCurrentState;
     IMDState downloadCurrentState;

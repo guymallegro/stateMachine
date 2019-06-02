@@ -4,6 +4,12 @@ public class PauseDownload extends AMDState {
     }
 
     @Override
+    public void enterState() {
+        super.enterState();
+        context.time = 0;
+    }
+
+    @Override
     public void downloadDelete() {
         if (context.time > 4) {
             if (!context.isEnoughSpace)
