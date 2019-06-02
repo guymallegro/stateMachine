@@ -18,7 +18,7 @@ public class Downloading extends AMDState {
 
         if (context.userPoints < 4) {
             context.downloadSpeed = 1;
-            context.setUserCurrentState(context.begginerUser);
+            context.setUserCurrentState(context.beginnerUser);
         } else if (context.userPoints < 7) {
             context.downloadSpeed = 1.2;
             context.setUserCurrentState(context.advancedUser);
@@ -44,7 +44,7 @@ public class Downloading extends AMDState {
 
             if (context.userPoints < 4) {
                 context.downloadSpeed = 1;
-                context.setUserCurrentState(context.begginerUser);
+                context.setUserCurrentState(context.beginnerUser);
             } else if (context.userPoints < 7) {
                 context.downloadSpeed = 1.2;
                 context.setUserCurrentState(context.advancedUser);

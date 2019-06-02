@@ -4,7 +4,7 @@ public class Context {
     public int filesInQueue = 0;
     public boolean isEnoughSpace = true;
     public int downloadPercentage = 0;
-    public boolean isMoviePaused = false;
+    public boolean isMoviePausedbyUser = false;
     public int userPoints = 0;
     public double downloadSpeed = 1;
     public int time = 0;
@@ -28,7 +28,7 @@ public class Context {
     IMDState waitingToPlay;
     IMDState pausedMovie;
 
-    IMDState begginerUser;
+    IMDState beginnerUser;
     IMDState advancedUser;
     IMDState professionalUser;
 
@@ -47,14 +47,14 @@ public class Context {
         waitingToPlay = new WaitingToPlay(this);
         pausedMovie = new PausedMovie(this);
 
-        begginerUser = new BegginerUser(this);
+        beginnerUser = new BegginerUser(this);
         advancedUser = new AdvancedUser(this);
         professionalUser = new ProfessionalUser(this);
 
         internetCurrentState = internetOff;
         downloadCurrentState = waitingForDownload;
         movieCurrentState = waitingToPlay;
-        userCurrentState = begginerUser;
+        userCurrentState = beginnerUser;
     }
 
 
