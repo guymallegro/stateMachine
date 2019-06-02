@@ -2,14 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="af535f4b-8140-4a46-b926-1dc4804b619a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Context.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Context.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Downloading.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Downloading.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/FixingDownload.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/FixingDownload.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PauseDownload.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PauseDownload.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PlayingMovie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PlayingMovie.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/WaitingForDownload.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/WaitingForDownload.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -20,7 +13,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Context.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="374">
@@ -30,10 +23,25 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/FixingDownload.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="2" column="23" lean-forward="true" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="23" />
+              <folding>
+                <element signature="e#90#91#0" expanded="true" />
+                <element signature="e#120#121#0" expanded="true" />
+                <element signature="e#595#596#0" expanded="true" />
+                <element signature="e#663#664#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/PausedMovie.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="13" selection-start-column="13" selection-end-column="13" />
+            <state relative-caret-position="476">
+              <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
               <folding>
                 <element signature="e#84#85#0" expanded="true" />
                 <element signature="e#114#115#0" expanded="true" />
@@ -94,6 +102,7 @@
       <find>files</find>
       <find>INTERNETON</find>
       <find>isMoviePaused</find>
+      <find>downloadDelete</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -161,7 +170,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1559489204606" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1559491554545" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
@@ -218,7 +227,21 @@
       <option name="project" value="LOCAL" />
       <updated>1559409727900</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Finish">
+      <created>1559489250517</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1559489250517</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Finish">
+      <created>1559489261465</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1559489261465</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -337,17 +360,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/WaitingToPlay.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="61" selection-start-line="8" selection-start-column="61" selection-end-line="8" selection-end-column="61" />
-          <folding>
-            <element signature="e#88#89#0" expanded="true" />
-            <element signature="e#118#119#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/IMDState.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -372,19 +384,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="1" column="21" selection-start-line="1" selection-start-column="11" selection-end-line="1" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/FixingDownload.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="30" selection-start-line="12" selection-start-column="16" selection-end-line="12" selection-end-column="30" />
-          <folding>
-            <element signature="e#90#91#0" expanded="true" />
-            <element signature="e#120#121#0" expanded="true" />
-            <element signature="e#595#596#0" expanded="true" />
-            <element signature="e#663#664#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -417,25 +416,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/PausedMovie.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="13" selection-start-column="13" selection-end-column="13" />
-          <folding>
-            <element signature="e#84#85#0" expanded="true" />
-            <element signature="e#114#115#0" expanded="true" />
-            <element signature="e#156#157#0" expanded="true" />
-            <element signature="e#222#223#0" expanded="true" />
-            <element signature="e#268#269#0" expanded="true" />
-            <element signature="e#334#335#0" expanded="true" />
-            <element signature="e#380#381#0" expanded="true" />
-            <element signature="e#446#447#0" expanded="true" />
-            <element signature="e#497#498#0" expanded="true" />
-            <element signature="e#564#565#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/PlayingMovie.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
@@ -459,6 +439,49 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
           <caret line="22" column="28" lean-forward="true" selection-start-line="22" selection-start-column="28" selection-end-line="22" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/WaitingToPlay.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="61" selection-start-line="8" selection-start-column="61" selection-end-line="8" selection-end-column="61" />
+          <folding>
+            <element signature="e#88#89#0" expanded="true" />
+            <element signature="e#118#119#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/FixingDownload.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="23" lean-forward="true" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="23" />
+          <folding>
+            <element signature="e#90#91#0" expanded="true" />
+            <element signature="e#120#121#0" expanded="true" />
+            <element signature="e#595#596#0" expanded="true" />
+            <element signature="e#663#664#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PausedMovie.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
+          <folding>
+            <element signature="e#84#85#0" expanded="true" />
+            <element signature="e#114#115#0" expanded="true" />
+            <element signature="e#156#157#0" expanded="true" />
+            <element signature="e#222#223#0" expanded="true" />
+            <element signature="e#268#269#0" expanded="true" />
+            <element signature="e#334#335#0" expanded="true" />
+            <element signature="e#380#381#0" expanded="true" />
+            <element signature="e#446#447#0" expanded="true" />
+            <element signature="e#497#498#0" expanded="true" />
+            <element signature="e#564#565#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
