@@ -8,7 +8,7 @@ public class PauseDownload extends AMDState {
         if (context.time > 4) {
             if (!context.isEnoughSpace)
                 context.setDownloadCurrentState(context.waitingForDownload);
-            else {
+            else if (context.isInternetConnected) {
                 context.setDownloadCurrentState(context.downloading);
             }
         }

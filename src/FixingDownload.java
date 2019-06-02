@@ -12,9 +12,10 @@ public class FixingDownload extends AMDState {
     @Override
     public void downloadDelete() {
         context.isEnoughSpace = true;
-        if (context.filesInQueue == 0)
+        if (context.filesInQueue == 0) {
+            context.userPoints--;
             context.setDownloadCurrentState(context.waitingForDownload);
-        else
+        } else
             context.setDownloadCurrentState(context.downloading);
     }
 

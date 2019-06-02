@@ -6,6 +6,7 @@ public class Context {
     public int downloadPercentage = 0;
     public boolean isMoviePaused = false;
     public int userPoints = 0;
+    public double downloadSpeed = 1;
     public int time = 0;
     public int stoppedAtFrame = 0;
 

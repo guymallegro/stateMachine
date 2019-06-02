@@ -27,14 +27,13 @@ public class PlayingMovie extends AMDState {
 
     @Override
     public void holdMovie() {
-        if (context.isMoviePaused)
-            context.setMovieCurrentState(context.pausedMovie);
+        context.isMoviePaused = true;
+        context.setMovieCurrentState(context.pausedMovie);
     }
 
     @Override
     public void downloadError() {
         context.setMovieCurrentState(context.pausedMovie);
-
     }
 
     @Override
