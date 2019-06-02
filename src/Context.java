@@ -10,6 +10,7 @@ public class Context {
     public int time = 0;
     public int stoppedAtFrame = 0;
     public boolean isOn = false;
+    public String userStatus = "b";
 
     IMDState internetCurrentState;
     IMDState downloadCurrentState;

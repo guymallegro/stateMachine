@@ -5,49 +5,50 @@ public class Downloading extends AMDState {
 
     @Override
     public void downloadFinish() {
+        context.userPoints++;
         if (context.filesInQueue == 0) {
-            context.userPoints++;
             context.setDownloadCurrentState(context.waitingForDownload);
         } else if (context.isEnoughSpace) {
-            context.userPoints++;
             context.setDownloadCurrentState(context.downloading);
         } else {
-            context.userPoints++;
             context.setDownloadCurrentState(context.pauseDownload);
         }
 
-        if (context.userPoints < 4) {
+        if (context.userPoints < 4 && !context.userStatus.equals("b")) {
             context.downloadSpeed = 1;
             context.setUserCurrentState(context.beginnerUser);
-        } else if (context.userPoints < 7) {
+            context.userStatus = "b";
+        } else if (context.userPoints > 4 && context.userPoints < 7 && !context.userStatus.equals("a")) {
             context.downloadSpeed = 1.2;
             context.setUserCurrentState(context.advancedUser);
-        } else {
+            context.userStatus = "a";
+        } else if (context.userPoints > 7 && !context.userStatus.equals("p")) {
             context.downloadSpeed = 1.5;
             context.setUserCurrentState(context.professionalUser);
+            context.userStatus = "p";
         }
     }
 
     @Override
     public void downloadAborted() {
-        if (context.filesInQueue == 0) {
+        if (context.userPoints > 0) {
             context.userPoints--;
+        }
+        if (context.filesInQueue == 0) {
             context.setDownloadCurrentState(context.waitingForDownload);
         } else if (context.isEnoughSpace) {
-            context.userPoints--;
             context.setDownloadCurrentState(context.downloading);
         } else {
-            context.userPoints--;
             context.setDownloadCurrentState(context.pauseDownload);
         }
 
-        if (context.userPoints < 4) {
+        if (context.userPoints < 4 && !context.userStatus.equals("b")) {
             context.downloadSpeed = 1;
             context.setUserCurrentState(context.beginnerUser);
-        } else if (context.userPoints < 7) {
+        } else if (context.userPoints > 4 && context.userPoints < 7 && !context.userStatus.equals("a")) {
             context.downloadSpeed = 1.2;
             context.setUserCurrentState(context.advancedUser);
-        } else {
+        } else if (context.userPoints > 7 && !context.userStatus.equals("p")) {
             context.downloadSpeed = 1.5;
             context.setUserCurrentState(context.professionalUser);
         }
